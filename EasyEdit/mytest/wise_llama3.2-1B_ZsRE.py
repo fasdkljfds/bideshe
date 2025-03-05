@@ -10,8 +10,7 @@ torch.cuda.empty_cache()
 from huggingface_hub import login
 login(token='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')
 
-sys.path.append('..')
-from easyeditor import (
+from EasyEdit.easyeditor import (
     FTHyperParams,
     GraceHyperParams,
     MEMITHyperParams,
@@ -21,6 +20,7 @@ from easyeditor import (
     BaseEditor,
     summary_metrics,
 )
+
 
 if __name__ == "__main__":
     parser = argparse.ArgumentParser()
@@ -137,4 +137,3 @@ if __name__ == "__main__":
 
     if len(metrics) > 0:
         summary_metrics(metrics)
-
