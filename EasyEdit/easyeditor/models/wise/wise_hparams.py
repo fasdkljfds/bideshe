@@ -27,7 +27,7 @@ class WISEHyperParams(HyperParams):
     inner_params: List[str]
     weights: Union[float, None]
     densities: Union[float, None]
-
+    
     device: int
     alg_name: str
     model_name: str

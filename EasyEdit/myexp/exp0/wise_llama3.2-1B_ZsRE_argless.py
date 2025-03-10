@@ -11,9 +11,9 @@ torch.cuda.empty_cache()
 
 from huggingface_hub import login
 login(token='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')
-sys.path.append('..')
+sys.path.append('../..')
 sys.path.append('/content/drive/MyDrive/bishe')
-sys.path.append('.')
+sys.path.append('..')
 from EasyEdit.easyeditor import (
     FTHyperParams,
     GraceHyperParams,
@@ -28,10 +28,10 @@ from EasyEdit.easyeditor import (
 
 args = SimpleNamespace(
     editing_method = 'WISE',            # 必填参数
-    hparams_dir = '../myhparams/WISE/llama3.2-1b.yaml',          # 超参数目录
-    data_dir = '../data/wise',                # 数据目录
+    hparams_dir ='../../myhparams/WISE/llama3.2-1b.yaml',          # 超参数目录
+    data_dir ='../../data/wise',                # 数据目录
     data_type = 'ZsRE',             # 数据类型
-    output_dir = './outputs',           # 输出目录
+    output_dir ='outputs',           # 输出目录
     ds_size = 10,                        # 数据集大小
     sequential_edit = True              # 是否顺序编辑
 )
@@ -48,7 +48,7 @@ elif args.editing_method == 'MEND':
 elif args.editing_method == 'GRACE':
     editing_hparams = GraceHyperParams
 elif args.editing_method == 'WISE':
-    editing_hparams = WISEHyperParams
+        editing_hparams = WISEHyperParams
 else:
     raise NotImplementedError
 
