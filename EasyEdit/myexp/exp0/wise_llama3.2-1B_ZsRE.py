@@ -9,7 +9,7 @@ torch.cuda.empty_cache()
 
 from huggingface_hub import login
 login(token='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')
-
+print('当前工作目录')
 print(sys.path)
 from EasyEdit.easyeditor import (
     FTHyperParams,
