@@ -10,7 +10,7 @@ torch.cuda.empty_cache()
 from huggingface_hub import login
 login(token='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')
 
-sys.path.append('/content/drive/MyDrive/bishe')
+print(sys.path)
 from EasyEdit.easyeditor import (
     FTHyperParams,
     GraceHyperParams,
