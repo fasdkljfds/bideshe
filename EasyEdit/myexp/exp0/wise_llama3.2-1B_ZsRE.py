@@ -106,7 +106,7 @@ if __name__ == "__main__":
                 'ground_truth': locality_ans
             },
         }
-
+    
     hparams = editing_hparams.from_hparams(f'{args.hparams_dir}')
 
     os.makedirs(args.output_dir, exist_ok=True)
@@ -114,7 +114,7 @@ if __name__ == "__main__":
         args.output_dir,
         f'{hparams.model_name.split("/")[-1]}_{args.editing_method}_N={args.ds_size}_Sequential={args.sequential_edit}.json'
         )
-
+    
     print("See results at: ", output_file)
 
     eval_metric = {

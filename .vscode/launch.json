@@ -1,0 +1,31 @@
+{
+    "configurations": [
+        
+        {
+            "name": "Python Debugger: Python File",
+            "type": "debugpy",
+            "request": "launch",
+            "program": "${file}"
+        },
+        {
+            "name": "Python: WISE LLaMA 3.2-1B Hallucination",
+            "type": "debugpy",
+            "request": "launch",
+            "program": "EasyEdit/myexp/exp2/wise_llama3.2-1B_temporal.py",
+            "console": "integratedTerminal",
+            "justMyCode": false,   
+            "args": [
+                "--editing_method=WISE",
+                "--hparams_dir=EasyEdit/myexp/exp2/llama3.2-1b.yaml",
+                "--data_dir=EasyEdit/data/wise",
+                "--ds_size=30",
+                "--data_type=hallucination",
+                "--sequential_edit",
+            ],
+            "cwd": "${workspaceFolder}",   // 确保当前工作目录正确
+            "env": {
+                "PYTHONPATH": "${workspaceFolder};${env:PYTHONPATH}"
+            },
+        }
+    ]
+}

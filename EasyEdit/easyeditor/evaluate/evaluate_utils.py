@@ -101,7 +101,7 @@ def test_prediction_acc(model, tok, hparams, prompts, targets, device, locality=
             else:
                 results.append(np.mean(np.equal(target_new_tokens, gen_token.detach().cpu().numpy().tolist()[0][-len(target_new_tokens):])))
         return results
-
+    print('hahahah 是老子')
     if isinstance(prompts, str):
         prompts,targets = [prompts,], [targets,]
     if not locality and hasattr(hparams, 'use_chat_template') and hparams.use_chat_template:
